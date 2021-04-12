@@ -1,0 +1,28 @@
+# membuat daftar belanja
+ 
+# menambah daftar Belanja
+def tambah_belanja(text):
+    file = open('C:\\Users\\danie\\Videos\\PrakAlPro\\belanja.txt', 'a+')
+    file.write('\n' + text)
+#list Belanja
+def daftar_belanja():
+    file = open('C:\\Users\\danie\\Videos\\PrakAlPro\\belanja.txt', 'a+')
+    file.seek(0)
+    text = file.read()
+    print(text)
+# tentang Apps
+def tentang_program():
+    tentang = open('C:\\Users\\danie\\Videos\\PrakAlPro\\about.txt', 'r')
+    app = tentang.read()
+    print(app)
+ 
+def membaca_daftar_source_code():
+    kode = open('C:\\Users\\danie\\Videos\\PrakAlPro\\source.txt', 'r')
+    apps = kode.read()
+    print(apps)
+ 
+ 
+def tanya_pengguna():
+    print('Silahkan Masukan Keperluan Belanja anda Ke daftar Belanja')
+    print('====================== Daftar Belanja ===================')
+    tambah_belanja(input('Mau Belanja Apa :  '))
